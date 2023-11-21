@@ -1,0 +1,36 @@
+﻿@model TbUser
+@{
+    ViewData["Title"] = "Guardar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Prueba Tecnica</h1>
+<h3>Registrar un usuario</h3>
+<form asp-action="Guardar" asp-controller="User" method="post">
+    <div class="mb-3">
+        <label for="fullName" class="form-label">Nombres Completos</label>
+        <input asp-for="FullName" type="text" class="form-control" id="fullName" aria-describedby="fullNameHelp">
+        <div id="fullNameHelp" class="form-text">Introduzca los nombres completos</div>
+        <span asp-validation-for="FullName" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="userName" class="form-label">Nombres de usuario</label>
+        <input asp-for="UserName" type="text" class="form-control" id="userName" aria-describedby="userNameHelp">
+        <div id="userNameHelp" class="form-text">Introduzca el nombre de usuario</div>
+        <span asp-validation-for="FullName" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Correo electronico</label>
+        <input asp-for="Email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">Introduzca el correo electronico</div>
+        <span asp-validation-for="FullName" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="passwordUser" class="form-label">Password</label>
+        <input asp-for="PasswordUser" type="password" class="form-control" id="passwordUser">
+        <span asp-validation-for="FullName" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar usuario</button>
+    <a asp-action="Listar" asp-controller="User" class="btn btn-warning">Volver a la lista</a>
+</form>
+
+<autor>Trabajo desarrollado por: Deisy Tatiana Gomez Fernandez</autor>

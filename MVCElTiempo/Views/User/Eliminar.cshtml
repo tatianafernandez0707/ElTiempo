@@ -1,0 +1,20 @@
+﻿@model TbUser
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Eliminación de usuarios</h3>
+<form asp-action="Eliminar" asp-controller="User" method="post">
+    <input asp-for="IdUser" type="hidden" class="form-control" id="IdUser">
+
+    <div class="alert alert-danger" role="alert">
+        ¿Desea eliminar el usuario :@Html.DisplayTextFor(m=>m.UserName) ?
+    </div>
+
+    <button type="submit" class="btn btn-danger">Eliminar usuario</button>
+    <a asp-action="Listar" asp-controller="User" class="btn btn-warning">Volver a la lista</a>
+</form>
+
+<autor>Trabajo desarrollado por: Deisy Tatiana Gomez Fernandez</autor>
+
